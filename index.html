@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #000;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 800px;
+      height: 600px;
+    }
+
+    .upper-banner {
+      width: 100%;
+      height: 300px;
+      padding: 32px;
+
+      position: relative;
+
+      background-color: white;
+    }
+
+    .upper-banner .title {
+      font-size: 48px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #0f5891;
+    }
+
+    .upper-banner .subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      font-style: italic;
+
+      position: absolute;
+      top: 27%;
+      left: 25%;
+    }
+
+    .upper-banner .logo-container {
+      position: absolute;
+      top: 15%;
+      left: 79%;
+    }
+
+    .upper-banner .logo-container .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      position: absolute;
+      top: 124%;
+      left: 30%;
+    }
+
+    .upper-banner .user-certificated {
+      font-size: 18px;
+      text-transform: uppercase;
+
+      position: absolute;
+      top: 55%;
+      left: 4%;
+    }
+
+    .upper-banner .user-name {
+      font-size: 28px;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 0.5px;
+
+      position: absolute;
+      top: 65%;
+      left: 4%;
+    }
+
+    .upper-banner .logo-ep {
+      width: 160px;
+
+      position: absolute;
+      top: 80%;
+      left: 75%;
+
+      z-index: 1;
+    }
+
+    .bottom-banner {
+      width: 100%;
+      height: 300px;
+      padding: 32px;
+
+      background-color: #0f5891;
+
+      position: relative;
+    }
+
+    .bottom-banner .description {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .bottom-banner .title {
+      font-size: 32px;
+      font-weight: bold;
+
+      color: #0eb9ed;
+
+      margin-top: 56px;
+    }
+
+    .bottom-banner .signature {
+      width: 100px;
+
+      position: absolute;
+      top: 72%;
+      left: 3.5%;
+    }
+
+    .bottom-banner .logo {
+      width: 150px;
+
+      position: absolute;
+      top: 68%;
+      left: 76%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="upper-banner">
+        <header>
+          <h1 class="title">Certificado</h1>
+          <span class="subtitle">de conclusão de curso</span>
+          <div class="logo-container">
+            <img
+              width="100px"
+              src="https://i.imgur.com/v3RtnPa.png"
+              title="Br24"
+              alt="Br24"
+            />
+            <span class="subtitle">Academy</span>
+          </div>
+        </header>
+        <main>
+          <span class="user-certificated">Certificamos que</span>
+          <span class="user-name">NOME DA PESSOA</span>
+          <img
+            class="logo-ep"
+            src="https://i.imgur.com/BUqnrBY.png"
+            title="Empowering People"
+            alt="Empowering People"
+          />
+        </main>
+      </div>
+      <div class="bottom-banner">
+        <header>
+          <span class="description">
+            Concluiu com sucesso o curso da Br24, primeira empresa <br />
+            com permissão para realizar certificações sobre Bitrix24
+          </span>
+        </header>
+        <main>
+          <h2 class="title">Fundamentos de Bitrix24</h2>
+        </main>
+        <footer>
+          <img
+            class="signature"
+            src="https://i.imgur.com/rtEDNLP.png"
+            title="Signature"
+            alt="Filipe Bento"
+          />
+          <img
+            class="logo"
+            src="https://i.imgur.com/R0KKfYC.png"
+            title="Bitrix24"
+            alt="Bitrix24"
+          />
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
