@@ -26,7 +26,6 @@
     .upper-banner {
       width: 100%;
       height: 300px;
-      padding: 32px;
 
       background-color: #fff;
 
@@ -34,20 +33,9 @@
     }
 
     .upper-banner .title {
-      font-size: 56px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #1c4684;
-    }
-
-    .upper-banner .subtitle {
-      font-size: 20px;
-      font-weight: 600;
-      font-style: italic;
-
       position: absolute;
-      top: 30%;
-      left: 24%;
+      top: 8%;
+      left: 4%;
     }
 
     .upper-banner .logo-container {
@@ -111,7 +99,7 @@
     .bottom-banner .description {
       color: #fafafa;
       font-weight: bold;
-      line-height: 18px;
+      line-height: 20px;
       letter-spacing: 0.75px;
     }
 
@@ -128,7 +116,7 @@
       color: #fafafa;
 
       position: absolute;
-      top: 53%;
+      top: 55%;
       left: 4%;
     }
 
@@ -152,8 +140,11 @@
     <div class="container">
       <div class="upper-banner">
         <header>
-          <h1 class="title">Certificado</h1>
-          <span class="subtitle">de conclusão de curso</span>
+          <img
+            class="title"
+            src="https://i.imgur.com/saCOGsw.png"
+            title="Certificado de conclusão de curso"
+          >
           <div class="logo-container">
             <img
               src="https://i.imgur.com/0rXCP3s.png"
@@ -166,7 +157,7 @@
         </header>
         <main>
           <span class="user-certificated">Certificamos que</span>
-          <span class="user-name">{{ current_user.name | uppercase }}</span>
+          <span class="user-name">{{ current_user.name }}</span>
           <img
             class="logo-ep"
             src="https://i.imgur.com/xf6ZNA1.png"
@@ -184,7 +175,7 @@
         </header>
         <main>
           <h2 class="title">{{ course.name }}</h2>
-          <span class="end-date">Data: {{ 'now' | date: '%d/%m/%Y' }}</span>
+          <span class="end-date">Data: 25/01/2023</span>
         </main>
         <footer>
           <img
