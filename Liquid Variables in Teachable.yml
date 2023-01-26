@@ -1,0 +1,203 @@
+---
+Attachment: # Attachments are videos, pdfs, audio files, quizzes, and text attachments to lectures
+  - content_type # the content type for the attachment, such as 'audio_type'
+  - url # Link to download the file
+  - host_id # Id of video on wistia
+  - kind # the kind of attachment, example - 'video', 'text'
+  - file_extension # the file extension, example - 'pdf_embed', 'html'
+  - name # the name of the attachment file
+  - host # the host for the attachment, example - 'wistia'
+  - position # the position of the attachment in the lecture view
+  - is_published # whether or not the attachment is published
+  - downloadable # is this attachment embeddable
+  - text # the text content of the attachment if the attachment is of type 'text'
+  - thumbnail_url # the url to the thumbnail for the attachment's file if there is one
+  - embeddable # whether or not attachment is embeddable
+  - id # the id of the attachment in the database
+AuthorBio:
+  - headline # the author's headline
+  - profile_image_url # the author's profile image url
+  - bio # the author's bio description text
+  - name # the author's name
+  - id # the id of the author bio in the database
+Category:
+  - name # the category name
+  - description # the category description
+  - is_published # whether or not the category is published
+  - id # the id of the category in our database
+Comment:
+  - gravatar_url # the gravatar_url for the comment's creator
+  - user_id # the id of the comment's creator
+  - body # the text content of the comment
+  - workflow_state # the workflow_state of the comment, example - 'approved', 'removed', 'rejected', 'awaiting_review'
+  - id # the id of the comment in the database
+Coupon:
+  - formatted_discount # the discount amount with currency formatting
+  - formatted_price # the price amount with currency formatting
+  - calculated_discount # the calculated discount amount
+  - calculated_price # the calculated price amount
+  - currency # the currency for the coupon
+  - discount_percent # the discount amount percentage
+  - discount_amount # the discount amount
+  - number_available # the number of available uses for the coupon
+  - code # the code for the coupon
+  - name # the coupon's name
+  - expiration_date # the coupon's expiration date
+  - product_id # the id of the product that the coupon is applicable for
+  - is_published # whether or not a coupon is published
+  - duration_kind # the kind of duration for a coupon, example - 'forever', 'once'
+  - number_of_uses # the number of times a coupon has been used
+  - id # the id for the coupon in the database
+Block:
+  - liquid_path # the path for the liquid partial used by the block
+  - partial # the name of the liquid partial used by the block
+  - position # the position of the block when rendered in a page
+  - body # the block's body content
+  - data # the data attributes for a block, example - body
+  - id # the id for the block in the database
+CourseQuestion:
+  - question # the question for the course_question
+  - answer # the answer for the question
+  - course_id # the id of the course that the course_question belongs to
+  - position # the position number of the course_question when rendered on a page
+  - id # the id for the course_question in our database
+Course:
+  - url # the full url for the course
+  - path # the relative path for the course
+  - safe_image_url # the url for the course's safe image
+  - default_product_formatted_price # the course's default product's formatted price
+  - promo_video # the promo video attachment object for this course
+  - name # the course's name
+  - heading # the course's heading text
+  - page_title # the course's page title in the meta tags
+  - meta_description # the course's description in the meta tags
+  - friendly_url # the course's friendly url
+  - description # the course's description
+  - author_bio_id # the course's author's bio id
+  - position # the position of the course when rendered in the courses directory
+  - conversion_pixels # the snippet for the course's thank you page
+  - closing_letter # the text content for the course's closing letter block on the sales page
+  - image_url # the url for the image for this course
+  - hero_image_url # the url for the course's hero image
+  - is_published # whether or not the course is published
+  - bundled_courses_count # the number of courses that are bundled with this course
+  - is_open # whether the course is open for enrollments or not
+  - purchase_redirect_url # optional url that can be set for redirecting to after purchasing instead of using thank you page
+  - default_product # the default product/pricing displayed for this course
+  - id # the id for this course in the database
+  - course_questions # the course_question objects for this course
+  - has_products? # whether or not a course has products/pricing available
+  - user_enrolled? # whether or not the current user is enrolled in this course
+  - video # the snippet for the course's promo video
+  - lecture_sections # the lecture sections for this course
+  - percent_complete_for_user # the percentage of the course that the current user has completed
+Credential:
+  - id # the id for the credential in the database
+CustomLink:
+  - position # the position of the custom link in the nav
+  - location # the location of the link, example - 'header', 'footer'
+  - text # the displayed text for the link
+  - url # the url for the link
+  - id # the id for the custom link in the database
+Domain:
+  - url # the url for the domain
+  - id # the id for the domain in the database
+Integration:
+  - disqus_id # the disqus id
+  - id # the id for the integration in the database
+LectureProgress:
+  - id # the id for the lecture progress in the database
+LectureSection:
+  - name # the name of the lecture section
+  - course_id # the id of the course that the lecture section belongs to
+  - position # the position of the lecture section when rendered in the curriculum
+  - is_published # whether or not a lecture section is published
+  - lectures # the published lecture objects that belong to this lecture section
+  - id # the id for the lecture section in the databse
+Lecture:
+  - url # the url for the lecture
+  - name # the lecture's name
+  - download # whether or not a lecture is downloadable
+  - free_preview # whether or not there is free previewing available for the lecture
+  - description # the lecture's description
+  - course_id # the id of the course that the lecture belongs to
+  - position # the position of the lecture when rendered in a lecture section/curriculum
+  - is_published # whether or not the lecture is published
+  - lecture_section_id # the id of the lecture section that the lecture belongs to
+  - id # the id of the lecture in the database
+Product:
+  - formatted_price # the product's price with currency formatting
+  - name # the product's name
+  - description # the product's description
+  - billing_interval # the billing interval at which the product charges, example - 'monthly'
+  - currency # the currency for the price of the product
+  - position # the position of the product when rendered on a sales page
+  - price # the price amount for the product
+  - cc_statement_description # the text that appears on the cc statement for the purchase of this product
+  - is_recurring # whether or not a product charges on a recurring basis
+  - is_published # whether or not a product is published
+  - course_id # the id of the course which the product belongs to
+  - num_payments_required # the number of payments required for the product if applicable
+  - id # the id of the product in the database
+Sale:
+  - product_id # the id of the product that the sale pertains to
+  - user_id # the user id of the purchaser
+  - is_active # whether or not a sale is active
+  - current_period_start # the sale's billing start period
+  - current_period_end # the sale's billing end period of the sale
+  - is_recurring # whether or not a sale is recurring
+  - next_period_start # when the next billing cycle begins
+  - num_payments_required # the number of required payments remaining to be made on a sale
+  - id # the id of the sale in the database
+Page:
+  - title # the page's title
+  - friendly_url # the page's friendly url
+  - content # the content for the page (NO LONGER IN USE, content is now kept in the blocks)
+  - show_header # whether or not the page should display the header
+  - show_footer # whether or not the page should display the footer
+  - is_published # whether or not the page is published
+  - blank_page_template # whether or not the page should use no template
+  - published_at # when the page was published
+  - is_blog_post # whether or not a page is a blog post
+  - author_bio_id # the id of the author bio that the page belongs to
+  - is_disqus_enabled # whether or not comments are enabled on the page
+  - id # the id of the page in the database
+School:
+  - domain # the domain for the school
+  - primary_domain_url # the url for the school's primary domain
+  - purchasing_blocked? # whether or not purchasing is blocked on a school
+  - name # the school's name
+  - heading # the school's heading text
+  - description # the school's description text
+  - facebook_username # the school's facebook username
+  - twitter_username # the school's twitter username
+  - homepage_id # the school's homepage page id
+  - google_plus_username # the school's google+ username
+  - logged_out_homepage_template # the name of the schools template to render for logged out users
+  - primary_domain_id # the id of the school's primary domain
+  - logged_in_homepage_template # the name of the schools template to render for logged in users
+  - course_id # the id for the course that the school renders if it has a course sales page set as its homepage
+  - email # the email for the school
+  - email_from_name # the name from which the school emails
+  - is_customized # whether or not a school has customizations
+  - down_for_maintenance # whether or not a school is down for maintenance
+  - is_blog_enabled # whether or not the school has enabled the blog feature
+  - blog_title # the school's blog title
+  - blog_description # the school's blog description
+  - blog_about # the school's blog about text
+  - comments_threaded # whether or not a school displays comments in a threaded structure
+  - comments_moderation # whether or not the school has comment moderation enabled
+  - id # the id for the school in the database
+User:
+  - role # the role of the user, example - 'owner', 'author'
+  - gravatar_url # the gravatar url for the user
+  - email # the user's email
+  - affiliate_code # the user's affiliate code
+  - name # the user's name
+  - is_owner # whether or not the user is an owner of the school
+  - sign_in_count # the number of sign ins for the user
+  - is_author # whether or not the user is an author of the school
+  - last_four # the last four numbers on the user's credit card if they have one saved
+  - author_bio_id # the user's author bio object id if they have one associated with them
+  - preference # the user's preferences
+  - id # the id for the user in the database

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      color: #000;
+      font-family: sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .container {
+      width: 800px;
+      height: 600px;
+    }
+
+    .upper-banner {
+      width: 100%;
+      height: 300px;
+      padding: 32px;
+
+      background-color: #fff;
+
+      position: relative;
+    }
+
+    .upper-banner .title {
+      font-size: 56px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #1c4684;
+    }
+
+    .upper-banner .subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      font-style: italic;
+
+      position: absolute;
+      top: 30%;
+      left: 24%;
+    }
+
+    .upper-banner .logo-container {
+      position: absolute;
+      top: 15%;
+      left: 79%;
+    }
+
+    .upper-banner .logo-container .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+
+      position: absolute;
+      top: 124%;
+      left: 30%;
+    }
+
+    .upper-banner .user-certificated {
+      font-size: 18px;
+      text-transform: uppercase;
+
+      position: absolute;
+      top: 57%;
+      left: 4%;
+    }
+
+    .upper-banner .user-name {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+
+      position: absolute;
+      top: 67%;
+      left: 4%;
+    }
+
+    .upper-banner .logo-ep {
+      width: 160px;
+
+      position: absolute;
+      top: 75%;
+      left: 75%;
+
+      z-index: 1;
+    }
+
+    .bottom-banner {
+      width: 100%;
+      height: 300px;
+      padding: 32px;
+
+      background-color: #1c4684;
+
+      position: relative;
+      z-index: 0;
+    }
+
+    .bottom-banner .description {
+      color: #fafafa;
+      font-weight: bold;
+      line-height: 18px;
+      letter-spacing: 0.75px;
+    }
+
+    .bottom-banner .title {
+      font-size: 24px;
+      font-weight: bold;
+
+      color: #19affb;
+
+      margin-top: 56px;
+    }
+
+    .bottom-banner .end-date {
+      color: #fafafa;
+
+      position: absolute;
+      top: 53%;
+      left: 4%;
+    }
+
+    .bottom-banner .signature {
+      width: 100px;
+
+      position: absolute;
+      top: 72%;
+      left: 4%;
+    }
+
+    .bottom-banner .logo {
+      width: 150px;
+
+      position: absolute;
+      top: 68%;
+      left: 76%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="upper-banner">
+        <header>
+          <h1 class="title">Certificado</h1>
+          <span class="subtitle">de conclusão de curso</span>
+          <div class="logo-container">
+            <img
+              src="https://i.imgur.com/0rXCP3s.png"
+              width="100px"
+              title="Br24"
+              alt="Br24"
+            >
+            <span class="subtitle">Academy</span>
+          </div>
+        </header>
+        <main>
+          <span class="user-certificated">Certificamos que</span>
+          <span class="user-name">{{ current_user.name | uppercase }}</span>
+          <img
+            class="logo-ep"
+            src="https://i.imgur.com/xf6ZNA1.png"
+            title="Empowering People"
+            alt="Empowering People"
+          >
+        </main>
+      </div>
+      <div class="bottom-banner">
+        <header>
+          <span class="description">
+            Concluiu com sucesso o curso da Br24, primeira empresa <br>
+            com permissão para realizar certificações sobre Bitrix24
+          </span>
+        </header>
+        <main>
+          <h2 class="title">{{ course.name }}</h2>
+          <span class="end-date">Data: {{ course.report_card.certificate_issued_at | date: '%d/%m/%Y' }}</span>
+        </main>
+        <footer>
+          <img
+            class="signature"
+            src="https://i.imgur.com/rtEDNLP.png"
+            title="Filipe Bento"
+            alt="Filipe Bento"
+          >
+          <img
+            class="logo"
+            src="https://i.imgur.com/zv63cXn.png"
+            title="Bitrix24"
+            alt="Bitrix24"
+          >
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
