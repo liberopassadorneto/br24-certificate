@@ -175,7 +175,7 @@
         </header>
         <main>
           <h2 class="title">{{ course.name }}</h2>
-          <span class="end-date">Data: 25/01/2023</span>
+          <span class="end-date">Data: {{ 'now' | date: '%d/%m/%Y' }}</span>
         </main>
         <footer>
           <img
